@@ -1,2 +1,2 @@
 # dexygen.com
-Dexygen: Software Simple and Powerful
+Dexygen: Software, Powerful and Simple
