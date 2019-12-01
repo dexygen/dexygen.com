@@ -12,33 +12,6 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Arvo&display=swap" rel="stylesheet">
 		<style type="text/css">
-      /*
-  		@media all and (min-width: 481px) {
-        #header-bar {
-          justify-content: space-between;	
-				}
-			}
-      */
-      /*
-			@media all and (max-width: 480px) {
-        #header-container {
-					display: flex;
-					justify-content: center;
-				}
-				#header-bar {
-					display: flex;
-					flex-direction: column;
-				}
-				#header-bar nav {
-					justify-content: center;
-				}
-			}
-			@media all and (min-width: 481px) {
-        #header-bar {
-          justify-content: space-between;	
-				}				
-			}
-      */
       .row {
         display: flex;
         flex-wrap: wrap;
@@ -84,6 +57,17 @@
         color: #098691;
       }
 		</style>
+    <script>
+      setTimeout(function() {
+        var fragmentId = window.location.search ? window.location.search.slice(1) : 'home';
+        var fragmentsNode = document.querySelector('#fragments'); 
+        var insertedFragment;
+        var clonedFragmentNode = document.querySelector('#fragments #' + fragmentId).cloneNode(true);
+        
+        clonedFragmentNode.id = clonedFragmentNode.id + '-block';
+        insertedFragment = fragmentsNode.parentNode.insertBefore(clonedFragmentNode, fragmentsNode);
+      });
+    </script>
 	</head>
 	<body>
     <div class="row">
@@ -115,61 +99,40 @@
         </div>
       </div>
     </div>
-    <div class="row">
-      <div class="column-left"></div>
-      <div class="column-main">
-        <div class="pl-1 pt-2">
-          <div class="border-b-2 border-gray-200 content-font">
-            <div class="text-2xl italic">
-              "A designer knows he has achieved perfection not when there is nothing left to add, but when there is nothing left to take away."
-            </div>
-            <div class="text-lg mb-2">
-              -- Antoine de Saint-Exupery
+    <div id="fragments" class="hidden">
+      <div id="home">
+        <div class="row">
+          <div class="column-left"></div>
+          <div class="column-main">
+            <div class="pl-1 pt-2">
+              <div class="border-b-2 border-gray-200 content-font">
+                <div class="text-2xl italic">
+                  "A designer knows he has achieved perfection not when there is nothing left to add, but when there is nothing left to take away."
+                </div>
+                <div class="text-lg mb-2">
+                  -- Antoine de Saint-Exupery
+                </div>
+              </div>
+              <div class="intermediate-green">
+                <div class="pt-3 text-2xl font-semibold">
+                  Accidentally Declarative
+                </div>
+                <div class="text-xl font-medium">
+                  An Approach for Mapping Input Field Values to/from JSON
+                </div>
+              </div>
+              <div class="ml-3 pt-2 text-lg content-font">
+                "Programming paradigms are a way to classify programming languages based on their features. Languages can be classified into multiple paradigms" 
+                <a class="italic intermediate-green" target="_blank" href="https://en.wikipedia.org/wiki/Programming_paradigm">thus quoth Wikipedia</a>. The same article goes on to list what are apparently considered the two most common paradigms:
+                <ol class="my-1 list-decimal ml-6">
+                  <li>Imperative ("in which the programmer instructs the machine how to change its state")</li>
+                  <li>Declarative ("in which the programmer merely declares properties of the desired result, but not how to compute it")</li>
+                </ol>
+                From the title of this article can you guess which one I'll be focused on <span class="italic intermediate-green">....Read More</span>
             </div>
           </div>
-          <div class="intermediate-green">
-            <div class="pt-3 text-2xl font-semibold">
-              Accidentally Declarative
-            </div>
-            <div class="text-xl font-medium">
-              An Approach for Mapping Input Field Values to/from JSON
-            </div>
-          </div>
-          <div class="ml-3 pt-2 text-lg content-font">
-            "Programming paradigms are a way to classify programming languages based on their features. Languages can be classified into multiple paradigms" 
-            <a class="italic intermediate-green" target="_blank" href="https://en.wikipedia.org/wiki/Programming_paradigm">thus quoth Wikipedia</a>. The same article goes on to list what are apparently considered the two most common paradigms:
-            <ol class="my-1 list-decimal ml-6">
-              <li>Imperative ("in which the programmer instructs the machine how to change its state")</li>
-              <li>Declarative ("in which the programmer merely declares properties of the desired result, but not how to compute it")</li>
-            </ol>
-            From the title of this article can you guess which one I'll be focused on <span class="italic intermediate-green">....Read More</span>
         </div>
       </div>
     </div>
-    <!--
-    <div>
-      <div class="inline-block w-1/6 left-gutter"></div>
-      <div class="inline-block w-7/12">
-				<div id="header-bar" class="flex">
-					<div id="header-dexygen">
-						<span class="text-4xl font-bold header-dexygen-span dexygen-font">Dexygen</span>
-					</div>
-					<nav class="mt-5 text-center">
-						<a href="./index.html">Home</a>
-						<a href="./index.html" >Blog</a>
-					</nav>
-				</div>
-      </div>
-    </div>
-    <div>
-      <div id="logo-container" class="inline-block w-1/6 text-right left-gutter">
-        <img class="inline-block" src="./assets/images/dexygen-min.png" alt=""/>   
-      </div>
-      <div class="inline-block w-7/12 dexygen-tagline -ml-1 -mt-5 pl-1">
-        Software: Powerful and Simple
-      </div>
-      <div class="w-1/4"></div>
-    </div>
-    -->
 	</body>
 </html>
