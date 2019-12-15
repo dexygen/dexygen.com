@@ -7,132 +7,83 @@
 		<title>
 			Dexygen: Software, Powerful and Simple
 		</title>
-		<link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+		
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Tomorrow&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Arvo&display=swap" rel="stylesheet">
+    
 		<style type="text/css">
-      .row {
-        display: flex;
-        flex-wrap: wrap;
+		  /* Eventually move to ./assets/css/dexygen */
+      .body-proper {
+        min-height: 100vh;
       }
-     .column-left {
-        display: flex;
-        flex-direction: column;
-        min-width: 15%;
+      .left-gutter {
+        min-width: 88px;
       }
-      .column-main {
-        display: flex;
-        flex-direction: column;
-        min-width: 65%;
-        max-width: 65%;
+      .ml-logo-row {
+        margin-left: -88px;
+      }
+      .header-proper {
+        color: #09768D;
       }
 			.dexygen-span {
         font-family: 'Tomorrow', "Poppins", "Tahoma", "Verdana", "sans-serif";
 			}
-      .darker-green {
-        color: #09768D;
-      }
       .nav-tagline-font {
         font-family: "Poppins", "Tomorrow", "Tahoma", "Verdana", "sans-serif";
       }
-      nav a.selected {
-        border-bottom: 3px solid #46CEB4;
-      }
-      .logo {
-        min-height: 88px;
-      }
       .dexygen-tagline {
         background: #099595;
-        background-image: url("./assets/images/background.svg");
-        background-repeat: no-repeat;
-        background-position: 50% 15%;
-        min-height: 88px;
-        color: #d7d795;
+        color: #e5e589;
       }
       .content-font {
         font-family: 'Arvo', 'Palatino', serif;
       }
-      .intermediate-green {
-        color: #098691;
+      @media all and (max-width: 768px) { 
+        .ml-logo-row {
+          margin-left: 0;
+        }
       }
 		</style>
-    <script>
-      setTimeout(function() {
-        var fragmentId = window.location.search ? window.location.search.slice(1) : 'home';
-        var fragmentsNode = document.querySelector('#fragments'); 
-        var insertedFragment;
-        var clonedFragmentNode = document.querySelector('#fragments #' + fragmentId).cloneNode(true);
-        
-        clonedFragmentNode.id = clonedFragmentNode.id + '-block';
-        insertedFragment = fragmentsNode.parentNode.insertBefore(clonedFragmentNode, fragmentsNode);
-      });
-    </script>
 	</head>
-	<body>
-    <div class="row">
-      <div class="column-left"></div>
-      <div class="column-main">
-				<div class="flex justify-between darker-green">
-					<div>
-						<span class="pl-1 text-6xl font-bold dexygen-span">Dexygen</span>
-					</div>
-					<nav class="mt-6 text-center text-xl font-semibold nav-tagline-font">
-						<a class="mr-1 selected" href="./index.html">Home</a>
-            <a class="mr-1" href="./index.html">About</a>
-            <a class="mr-1" href="./index.html">Blog</a>
-            <a href="./index.html">Contact</a>
-					</nav>
-				</div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="column-left">
-        <div class="inline-block text-right">
-          <img class="inline-block" src="./assets/images/dexygen-min.png" alt=""/>
-        </div>
-      </div>
-      <div class="column-main">
-        <div class="text-4xl pl-1 pt-1 dexygen-tagline flex flex-wrap items-center content-start nav-tagline-font">
-						<span>Software:&nbsp;</span>
-						<span>Powerful and Simple</span>
-        </div>
-      </div>
-    </div>
-    <div id="fragments" class="hidden">
-      <div id="home">
-        <div class="row">
-          <div class="column-left"></div>
-          <div class="column-main">
-            <div class="pl-1 pt-2">
-              <div class="border-b-2 border-gray-200 content-font">
-                <div class="text-2xl italic">
-                  "A designer knows he has achieved perfection not when there is nothing left to add, but when there is nothing left to take away."
-                </div>
-                <div class="text-lg mb-2">
-                  -- Antoine de Saint-Exupery
-                </div>
+	<body class="flex flex-col body-proper">
+    <div class="w-11/12 sm:w-3/4 lg:w-3/4 xl:w-2/3 m-auto flex-1">
+      <div class="left-gutter inline-block"></div>
+      <div class="inline-block min-w-full">
+        <div class="flex flex-col">
+          <header class="header-proper flex flex-col lg:flex-row lg:justify-between">
+            <div class="text-5xl md:text-6xl">
+              <span class="dexygen-span font-bold">Dexygen</span>
+            </div>
+            <nav class="nav-tagline-font lg:mt-8 ml-1 lg:text-center md:text-xl font-semibold">
+              <a class="mr-1" href="./index.html">Home</a>
+              <a class="mr-1" href="./index.html">About</a>
+              <a href="./index.html">Contact</a>
+            </nav>
+          </header>
+          
+          <div class="ml-logo-row dexygen-tagline">
+            <img class="inline-block" src="./assets/images/dexygen-min.png" alt=""/>
+            <div class="inline-block align-top">
+              <div class="nav-tagline-font mt-1 text-lg sm:text-2xl md:text-3xl flex flex-col sm:flex-row">
+                <span>Software:&nbsp;</span>
+                <span>Powerful and Simple</span>
               </div>
-              <div class="intermediate-green">
-                <div class="pt-3 text-2xl font-semibold">
-                  Accidentally Declarative
-                </div>
-                <div class="text-xl font-medium">
-                  An Approach for Mapping Input Field Values to/from JSON
-                </div>
-              </div>
-              <div class="ml-3 pt-2 text-lg content-font">
-                "Programming paradigms are a way to classify programming languages based on their features. Languages can be classified into multiple paradigms" 
-                <a class="italic intermediate-green" target="_blank" href="https://en.wikipedia.org/wiki/Programming_paradigm">thus quoth Wikipedia</a>. The same article goes on to list what are apparently considered the two most common paradigms:
-                <ol class="my-1 list-decimal ml-6">
-                  <li>Imperative ("in which the programmer instructs the machine how to change its state")</li>
-                  <li>Declarative ("in which the programmer merely declares properties of the desired result, but not how to compute it")</li>
-                </ol>
-                From the title of this article can you guess which one I'll be focused on <span class="italic intermediate-green">....Read More</span>
+            </div>
+          </div>
+          
+          <div class="content-font">
+            <div class="text-2xl italic">
+            "A designer knows he has achieved perfection not when there is nothing left to add, but when there is nothing left to take away."
+            </div>
+            <div class="text-lg mb-2">
+            -- Antoine de Saint-Exupery
             </div>
           </div>
         </div>
       </div>
     </div>
+    <footer class="mt-auto mx-auto mb-0 w-11/12 sm:w-3/4 lg:w-3/4 xl:w-2/3">© 2019 Dexygen LLC</footer>
 	</body>
 </html>
