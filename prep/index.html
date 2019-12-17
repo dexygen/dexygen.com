@@ -18,6 +18,9 @@
       .body-proper {
         min-height: 100vh;
       }
+      .main-container {
+        background: #fbfbf7
+      }
       .left-gutter {
         min-width: 88px;
       }
@@ -30,15 +33,25 @@
 			.dexygen-span {
         font-family: 'Tomorrow', "Poppins", "Tahoma", "Verdana", "sans-serif";
 			}
-      .nav-tagline-font {
+      .nav-proper {
         font-family: "Poppins", "Tomorrow", "Tahoma", "Verdana", "sans-serif";
       }
-      .dexygen-tagline {
+      .logo-tagline-container {
         background: #099595;
         color: #e5e589;
       }
+      .tagline-container {
+        background: url('./assets/images/tagline-bg.png') no-repeat -94px 0;
+        font-family: "Poppins", "Tomorrow", "Tahoma", "Verdana", "sans-serif";
+        min-height: 88px;
+      }
       .content-font {
         font-family: 'Arvo', 'Palatino', serif;
+      }
+      .footer-proper {
+        font-family: 'Tomorrow', "Poppins", "Tahoma", "Verdana", "sans-serif";
+        background: #42ba93;
+        color: #fff;
       }
       @media all and (max-width: 768px) { 
         .ml-logo-row {
@@ -48,42 +61,44 @@
 		</style>
 	</head>
 	<body class="flex flex-col body-proper">
-    <div class="w-11/12 sm:w-3/4 lg:w-3/4 xl:w-2/3 m-auto flex-1">
+    <div class="main-container w-11/12 sm:w-3/4 lg:w-3/4 xl:w-2/3 m-auto flex-1">
       <div class="left-gutter inline-block"></div>
       <div class="inline-block min-w-full">
-        <div class="flex flex-col">
-          <header class="header-proper flex flex-col lg:flex-row lg:justify-between">
+        <main class="flex flex-col">
+          <!-- Begin content "blocks" -->
+          <header class="header-proper flex flex-col lg:flex-row lg:justify-between px-2">
             <div class="text-5xl md:text-6xl">
               <span class="dexygen-span font-bold">Dexygen</span>
             </div>
-            <nav class="nav-tagline-font lg:mt-8 ml-1 lg:text-center md:text-xl font-semibold">
+            <nav class="nav-proper lg:mt-8 ml-1 lg:text-center md:text-xl font-semibold">
               <a class="mr-1" href="./index.html">Home</a>
               <a class="mr-1" href="./index.html">About</a>
               <a href="./index.html">Contact</a>
             </nav>
           </header>
           
-          <div class="ml-logo-row dexygen-tagline">
+          <div class="ml-logo-row logo-tagline-container">
             <img class="inline-block" src="./assets/images/dexygen-min.png" alt=""/>
-            <div class="inline-block align-top">
-              <div class="nav-tagline-font mt-1 text-lg sm:text-2xl md:text-3xl flex flex-col sm:flex-row">
+            <div class="inline-block align-top tagline-container w-7/12 sm:w-2/3 md:w-3/4 lg:w-5/6">
+              <div class="mt-1 pl-2 text-lg sm:text-2xl md:text-3xl flex flex-col sm:flex-row">
                 <span>Software:&nbsp;</span>
                 <span>Powerful and Simple</span>
               </div>
             </div>
           </div>
           
-          <div class="content-font">
-            <div class="text-2xl italic">
+          <div class="mt-1 content-font px-2">
+            <div class="text-lg md:text-xl lg:text-2xl italic">
             "A designer knows he has achieved perfection not when there is nothing left to add, but when there is nothing left to take away."
             </div>
-            <div class="text-lg mb-2">
+            <div class="text-base lg:text-lg mb-2">
             -- Antoine de Saint-Exupery
             </div>
           </div>
-        </div>
+          <!-- End content "blocks" -->
+        </main>
       </div>
     </div>
-    <footer class="mt-auto mx-auto mb-0 w-11/12 sm:w-3/4 lg:w-3/4 xl:w-2/3">© 2019 Dexygen LLC</footer>
+    <footer class="mt-auto mx-auto mb-0 w-11/12 sm:w-3/4 lg:w-3/4 xl:w-2/3 footer-proper text-center py-1">© 2019 Dexygen LLC</footer>
 	</body>
 </html>
