@@ -12,7 +12,7 @@ const template = `
         <a href="https://github.com/dexygen/jackrabbitmvc/blob/c7c8f9ca06840a45b0776c3de2d3063457989f9e/jrmvc.lib.php" 
           target="_blank" class="underline home--jrvmc-link">
             JrMVC</a>
-            a 75-line PHP microframework:
+            a 75-line PHP micro-framework:
       </div>
       <div class="px-2 py-1">
         <pre><code class="php hljs">
