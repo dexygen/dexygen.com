@@ -15,40 +15,55 @@ const template = `
             a 75-line PHP micro-framework:
       </div>
       <div class="px-2 py-1">
-        <pre><code class="php hljs">
-require('jrmvc.lib.php');                              // 1) require library                           
+        <pre><code class="php hljs -py-2">
+// 1) Require library
+require('jrmvc.lib.php');                           
 
-class DemoMTO extends JrMvcMTO {                       // 1a) optionally extend MTO for non-template output, e.g. JSON
+// 1a) Optionally extend MTO for non-template output, e.g. JSON
+class DemoMTO extends JrMvcMTO {                       
  function onNullTemplate() {
-   echo json_encode($this->model); // Instead a binary such as an xls or pdf could be sent
+   echo json_encode($this->model);
+   // Instead a binary such as an xls or pdf could be sent
  }
 }
 
-class DemoController extends AbstractJrMvcController { // 2) extend Controller  
-  function applyInputToModel() {                      // 3) implement only required method
+// 2) Extend Controller
+class DemoController extends AbstractJrMvcController {
 
-     // Create separate demo.tpl.php file and test content with: print_r($model);
-     $mto = new JrMvcMTO('demo.tpl.php');             // 4) instantiate
+  // 3) Implement only required method, possible through
+  //    the power of the "template method" design:
+  //    https://en.wikipedia.org/wiki/Template_method_pattern
+  function applyInputToModel() {                      
 
-     // To output json instead use extended MTO above: $mto = new DemoMTO(JrMvcMTO::NULL_TPL);
-     // Or in PHP 7 you can use an inner class instead of defining DemoMTO above this class:
+     // 4) Instatiate a "model transfer object" (MTO) passing (the path to)
+     //    a php template; test output with &lt;php print_r($model);
+     $mto = new JrMvcMTO('demo.tpl.php'); 
+
+     // To output json instead use extended MTO from "1a" above: 
+     // $mto = new DemoMTO(JrMvcMTO::NULL_TPL);
+     // Or in PHP 7 you can use an inner class 
+     // instead of defining DemoMTO above this class:
      $mto = new class(JrMvcMTO::NULL_TPL) extends JrMvcMTO {
          function onNullTemplate() {
              echo json_encode($this->model);
          }
      };
 
-     $mto->setModelValue('Su', 'Sunday');             // 5) assignments              
+     // 5) Assign values to the model individually
+     $mto->setModelValue('Su', 'Sunday');              
      $mto->setModelValue('Mo', 'Monday');
      $mto->setModelValue('Tu', 'Tuesday');
      $mto->setModelValue('We', 'Wednesday');
 
+     // Or in bulk
      $mto->setModelValues(['Th'=>'Thursday', 'Fr'=>'Friday', 'Sa'=>'Saturday']);
 
-     return $mto;                                     // 6) return MTO
+     // 6) Return MTO
+     return $mto;
    }
 }
-DemoController::sendResponse(new DemoController());    // 7) send response
+// 7) Send the response
+DemoController::sendResponse(new DemoController());    
 *
 * OUTPUT:
 *
