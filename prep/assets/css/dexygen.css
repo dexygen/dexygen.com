@@ -4,19 +4,14 @@
 }
 
 
-.body-proper {
-  min-height: 100vh;
-}
-.main-container {
-  background: #fbfbf7
-}
 .left-gutter {
   min-width: 88px;
 }
 .ml-logo-row {
   margin-left: -88px;
 }
-.heading-green {
+.header--top {
+  background: #e9f0d7;
   color: #09768D;
 }
 .tomorrow-sans-font {
@@ -26,13 +21,16 @@
   font-family: "Poppins", "Tomorrow", "Tahoma", "Verdana", "sans-serif";
 }
 .logo-tagline-container {
-  background: #F7F7EB;
+  background: #EFF4E3;
   color: #e5e589;
 }
 .tagline-container {
   background: url('../images/tagline-bg.png') no-repeat;
   margin-left: -0.258rem;
   min-height: 88px;
+}
+.app--content {
+  background: #FAFAF2;
 }
 .content-font {
   font-family: 'Arvo', 'Palatino', serif;
