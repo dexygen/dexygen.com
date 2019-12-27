@@ -11,7 +11,7 @@
   margin-left: -88px;
 }
 .header--top {
-  background: #e9f0d7;
+  background: #edf3df;
   color: #09768D;
 }
 .tomorrow-sans-font {
@@ -21,7 +21,7 @@
   font-family: "Poppins", "Tomorrow", "Tahoma", "Verdana", "sans-serif";
 }
 .logo-tagline-container {
-  background: #EFF4E3;
+  background: #FAFAF2;
   color: #e5e589;
 }
 .tagline-container {
@@ -30,7 +30,7 @@
   min-height: 88px;
 }
 .app--content {
-  background: #FAFAF2;
+  background: #F2F6E8;
 }
 .content-font {
   font-family: 'Arvo', 'Palatino', serif;
