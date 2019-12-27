@@ -7,9 +7,9 @@ export default {
   components: { DexHeader, DexFooter, Home },
   template: `
     <div class="h-screen flex flex-col">
-      <div class="main-container w-11/12 sm:w-3/4 lg:w-3/4 xl:w-2/3 m-auto flex-1">
-        <div class="left-gutter inline-block"></div>
-        <main class="inline-block min-w-full">
+      <div class="w-11/12 sm:w-3/4 lg:w-3/4 xl:w-2/3 m-auto flex-1">
+        <div class="app--left-gutter inline-block"></div>
+        <main class="app--main inline-block min-w-full">
           <div class="flex flex-col">
             <DexHeader />
             <div class="app--content">

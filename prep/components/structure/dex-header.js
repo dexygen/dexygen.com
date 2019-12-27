@@ -1,6 +1,6 @@
 const template = `
   <header>
-    <div class="header--top flex flex-col lg:flex-row lg:justify-between px-2">
+    <div class="header--upper flex flex-col lg:flex-row lg:justify-between px-2">
       <div class="text-5xl md:text-6xl">
         <span class="tomorrow-sans-font font-bold">Dexygen</span>
       </div>
@@ -10,14 +10,11 @@ const template = `
         <a href="./index.html">Contact</a>
       </nav>
     </div>
-
-    <div class="ml-logo-row logo-tagline-container">
+    <div class="header--lower flex">
       <img class="inline-block" src="./assets/images/dexygen-min.png" alt=""/>
-      <div class="inline-block align-top tagline-container w-7/12 sm:w-2/3 md:w-3/4 lg:w-5/6">
-        <div class="mt-1 pl-3 text-lg sm:text-2xl md:text-3xl flex flex-col sm:flex-row sans-font">
+      <div class="header--tagline-container w-full pl-3 text-lg sm:text-2xl md:text-3xl flex flex-col sm:flex-row sans-font">
           <span>Software:&nbsp;</span>
           <span>Powerful and Simple</span>
-        </div>
       </div>
     </div>
   </header>
