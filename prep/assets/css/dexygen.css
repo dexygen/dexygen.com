@@ -1,6 +1,6 @@
 /* highlight.js override(s) */
 .hljs {
-  background: #213B41;
+  background: #31464B;
 }
 
 
@@ -18,7 +18,7 @@
   min-width: 88px;
 }
 .app--content {
-  background: #f6f8ef;
+  background: #f6f4e7;
 }
 
 .header--upper {
