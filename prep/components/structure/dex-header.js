@@ -6,8 +6,7 @@ const template = `
       </div>
       <nav class="sans-font lg:mt-8 ml-1 lg:text-center md:text-xl font-semibold">
         <a class="mr-1" href="./index.html">Home</a>
-        <a class="mr-1" href="./index.html">About</a>
-        <a href="./index.html">Contact</a>
+        <a href="./index.html">About</a>
       </nav>
     </div>
     <div class="header--lower flex">
