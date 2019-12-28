@@ -15,10 +15,10 @@ export default {
             <div class="app--content">
               <Home />
             </div>
-            <DexFooter />
           </div>
         </main>
       </div>
+      <DexFooter />
     </div>
   `,
 };
