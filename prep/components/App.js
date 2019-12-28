@@ -1,10 +1,9 @@
 import DexHeader from '../components/structure/dex-header.js';
 import DexFooter from '../components/structure/dex-footer.js';
-import Home from '../components/content/home.js';
 
 export default {
   name: 'App',
-  components: { DexHeader, DexFooter, Home },
+  components: { DexHeader, DexFooter },
   template: `
     <div class="h-screen flex flex-col">
       <div class="w-11/12 sm:w-3/4 lg:w-3/4 xl:w-2/3 m-auto flex-1">
@@ -13,12 +12,12 @@ export default {
           <div class="flex flex-col">
             <DexHeader />
             <div class="app--content">
-              <Home />
+              <router-view />
             </div>
           </div>
         </main>
       </div>
-      <DexFooter />
+      <DexFooter class="w-11/12 sm:w-3/4 lg:w-3/4 xl:w-2/3" />
     </div>
-  `,
+  `
 };

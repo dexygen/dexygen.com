@@ -1,5 +1,5 @@
 const template = `
-  <footer class="mt-auto mx-auto mb-0 w-11/12 sm:w-3/4 lg:w-3/4 xl:w-2/3 footer-proper tomorrow-sans-font text-center py-1">
+  <footer class="mt-auto mx-auto mb-0 footer-proper tomorrow-sans-font text-center py-1">
     <div class="text-sm">© 2009-<span>{{copyrightThroughYear}}</span> Dexygen LLC</div>
     <div class="flex justify-center">
       <div class="ml-2">
